@@ -34,13 +34,17 @@
   }
   
   h3 {
+    font-size: 1.125rem;
+    color: $color-gray;
+    letter-spacing: 0.055em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: bold;
   }
   
   p {
-    font-size: 1.125rem;
-    letter-spacing: 0.055em;
-    line-height: 1.15;
     margin: 18px 0;
+    
 
     @include sm {
       font-size: 16px;
