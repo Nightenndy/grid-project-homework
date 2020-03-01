@@ -1,0 +1,63 @@
+.info {
+    letter-spacing: 0.055em;
+    background-color: $color-gray-light;
+    padding: 100px 0;
+
+    @include sm {
+        padding: 60px 0;
+    }
+    
+    &__container {
+        display: grid;
+        grid-gap: $gap * 5;
+        grid-template-columns: 1fr 270px;
+        max-width: 1340px;
+        margin: auto;
+        padding-right: $gap;
+        padding-left: $gap;
+
+        &:nth-of-type(1) {
+            grid-area: c1;
+        }
+        &:nth-of-type(2) {
+            grid-area: c2
+        }
+
+        @include sm {
+            grid-gap: $gap;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+              "c1"
+              "c2"
+        }
+      }  
+    p:first-of-type {
+        position: relative;
+        margin-top: -6px; 
+
+        @include sm {
+            margin-bottom: 16px;
+            margin-top: -5px;
+        }
+    }  
+
+    p:first-of-type::after {
+        position: absolute;
+        top: 0;
+        right: -50px;
+        background-color: #d8dadc;
+        height: 200px;
+        width: 2px;
+        content: "";
+    }
+
+    p:last-of-type {
+        @include sm {
+            margin: 0;
+        }
+    } 
+
+    &__image {
+        margin-top: 20px;        
+    }
+  }

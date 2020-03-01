@@ -1,10 +1,13 @@
 .skills {
     padding: ($gap / 2) ($gap / 2) ($gap * 2);
+
+    @include sm {
+      padding: $gap;
+    }
   
     &__container {
       display: grid;
-      padding: $gap;
-  
+      padding-bottom: $gap;  
       grid-gap: $gap / 2;
   
       @include lg-min {
@@ -87,6 +90,8 @@
     &__title {
       z-index: 2;
       margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
   
       @include abs-position;
     }
