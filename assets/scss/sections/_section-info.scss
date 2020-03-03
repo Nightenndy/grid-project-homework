@@ -60,9 +60,10 @@
         p {
             @include lg-min {
                 font-size: 1.125rem;
-            }
+            }           
+        }
 
-            &:first-of-type {
+        p:first-of-type {
             position: relative;
             margin-top: -5px; 
                 
@@ -90,7 +91,6 @@
                 @include sm {
                     display: none;
                 }
-            }
         }
     
     }  

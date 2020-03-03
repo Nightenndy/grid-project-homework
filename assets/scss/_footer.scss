@@ -1,6 +1,5 @@
 .footer {
-    padding: ($gap * 2.5) $gap ($gap * 3.5);
-    margin-bottom: $gap * 2;  
+    padding: 50px 20px 70px;
     text-align: center;  
     background-color: $color-primary;
   
@@ -8,10 +7,29 @@
       @extend %container;
     }
 
-    &__sicial {
+    &__social {
+        margin-bottom: 40px;
         position: relative;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50px, max-content));
+        grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
         justify-content: center;
     }
-}
+
+    a {
+      transition: color 0.5s;
+      display: block;     
+      padding: 10px;
+
+      :focus,
+      :hover {
+        color: $color-accent;
+        transition: color 0.5s;
+      }
+      
+      .fab {
+      font-size: 36px;
+      }
+    }
+    }
+
+    
