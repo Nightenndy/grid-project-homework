@@ -24,6 +24,11 @@
     font-size: 2.5rem;
     margin-bottom: 55px;
 
+    @include md-sm {
+      font-size: 2rem;
+      margin-bottom: 42px;      
+    }
+
     @include sm {
       font-size: 1.5rem;
       text-align: center;

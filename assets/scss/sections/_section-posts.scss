@@ -1,21 +1,63 @@
 .posts {
-   padding: 100px 0; 
+    @include lg-min {
+        padding-top: $gap * 5;
+        padding-bottom: $gap * 5;
+    }
+
+    @include lg-md {
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
+    }
+
+    @include md {
+        padding-top: $gap * 3;
+        padding-bottom: $gap * 3;
+    }
 
 
    &__container {
-    padding: 0 $gap;
-    margin: auto;
-    max-width: 1340px;
+    @extend %container;
    }
 
    &__sections {
     display: grid;
     grid-gap: $gap;
     padding-bottom: $gap;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
+
+    @include lg-min {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
         "d1 d1 d2 d3"
         "d4 d5 d6 d6";
+    }
+
+    @include lg-md {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "d1 d1 d2"
+        "d3 d4 d4 "
+        "d5 d5 d6";
+    }
+
+    @include md-sm {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "d1 d2"
+        "d3 d4"
+        "d5 d6";
+    }
+
+    @include sm {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "d1"
+        "d2"
+        "d3"
+        "d4"
+        "d5"
+        "d6";
+    }
+    
    }  
    
    .post-item {

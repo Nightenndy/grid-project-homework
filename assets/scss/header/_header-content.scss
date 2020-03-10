@@ -10,6 +10,7 @@
 
   &__title {
     text-align: center;
+    letter-spacing: 0.08em;
 
     @include lg-min {
       font-size: 3.75rem;
@@ -27,7 +28,6 @@
     }
     @include sm {
       min-width: 180px;
-      font-size: 1;
       margin: 0 0 43px;
     }
   }
@@ -35,10 +35,16 @@
   &__buttons {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .btn {
       margin-left: $gap / 2;
       margin-right: $gap / 2;
-    }
+    }    
   }
 }

@@ -1,30 +1,35 @@
 .info {
     letter-spacing: 0.055em;
     background-color: $color-gray-light;
-    
+
     @include lg-min {
-        padding: 100px 0;
+        padding-top: $gap * 5;
+        padding-bottom: $gap * 5;
     }
 
     @include lg-md {
-        padding: 80px 0;
+        padding-top: $gap * 4;
+        padding-bottom: $gap * 4;
     }
 
     @include md {
-        padding: 60px 0;
-    } 
+        padding-top: $gap * 3;
+        padding-bottom: $gap * 3;
+    }
+
+    h2 {
+        margin-top: 0;
+        
+        @include lg-md {
+            font-size: 2rem;
+            margin-bottom: 42px;      
+        }
+    }
 
     &__container {
         display: grid;          
         
-        @extend %container;
-
-        &:nth-of-type(1) {
-            grid-area: c1;
-        }
-        &:nth-of-type(2) {
-            grid-area: c2
-        }
+        @extend %container;        
 
         @include lg-min {
             grid-gap: $gap * 5;
@@ -38,16 +43,13 @@
 
         @include md-sm {
             grid-gap: $gap;
-            grid-template-columns: 1fr 240px;
+            grid-template-columns: 1fr 236px;
         }
 
         @include sm {
             padding: 0 20px;
             grid-gap: $gap;
             grid-template-columns: 1fr;
-            grid-template-areas:
-              "c1"
-              "c2"
         }
     }  
 
@@ -60,13 +62,12 @@
         p {
             @include lg-min {
                 font-size: 1.125rem;
-            }           
-        }
+            }  
+            
+            &:first-of-type {
+                position: relative;
+                margin-top: -5px; 
 
-        p:first-of-type {
-            position: relative;
-            margin-top: -5px; 
-                
                 &::after {
                     position: absolute;
                     top: 0;
@@ -74,38 +75,42 @@
                     height: 200px;
                     width: 2px;
                     content: "";
-                }
 
-                @include lg-min {
+                    @include lg-min {
                     right: -50px;                    
-                }            
+                    }  
+                    
+                    @include lg-md {
+                        right: -$gap;                    
+                    }
 
-                @include lg-md {
-                    right: -$gap;                    
+                    @include md {
+                        right: -10px;
+                    }  
+                    
+                    @include sm {
+                        display: none;
+                    }
                 }
+            }
 
-                @include md {
-                    right: -10px;
-                }
-
+            p:last-of-type {
                 @include sm {
-                    display: none;
+                    margin: 0;
                 }
+            } 
         }
-    
-    }  
-
-    p:first-of-type
-
-    p:last-of-type {
-        @include sm {
-            margin: 0;
-        }
-    } 
+    }     
 
     &__image {
-        margin-top: $gap;
-        max-width: 100%; 
-        max-height: 479px;   
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        
+        img {
+            margin-top: $gap;
+            max-width: 100%; 
+            max-height: 480px; 
+        }
     }
-  }
+}
