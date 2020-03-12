@@ -1251,6 +1251,14 @@ a {
 }
 
 @media (max-width: 991.8px) and (min-width: 768px) {
+  .btn {
+    min-width: 200px;
+    height: 50px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
   .header-content__title {
     font-size: 2.5rem;
     margin: 0 0 43px;
@@ -1330,6 +1338,14 @@ a {
     font-size: 2rem;
     margin-bottom: 42px;
   }
+  .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
   .info__container {
     grid-gap: 20px;
     grid-template-columns: 1fr 236px;
@@ -1354,6 +1370,17 @@ a {
   p {
     font-size: 16px;
     margin: 16px 0;
+  }
+  .btn {
+    min-width: 170px;
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+  }
+  .btn:not(:last-of-type) {
+    margin-bottom: 20px;
   }
   .header-content__title {
     min-width: 180px;
