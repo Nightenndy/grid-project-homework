@@ -7,7 +7,7 @@
   
     &__container {
       display: grid;
-      padding-bottom: $gap;  
+      padding-bottom: $gap;
       grid-gap: $gap / 2;
   
       @include lg-min {
@@ -36,7 +36,7 @@
           "a4 a4"
           "a5 a6"
           "a5 a7"
-          "a8 a9";   
+          "a8 a9";
       }
   
       @include md {
@@ -47,10 +47,12 @@
           "a4 a4"
           "a5 a6"
           "a5 a7"
-          "a8 a9";   
+          "a8 a9";
       }
 
       @include sm {
+        grid-gap: $gap;
+        padding-bottom: $gap;
         grid-template-columns: 1fr;
         grid-template-areas:
           "a1"
@@ -94,6 +96,9 @@
       letter-spacing: 0.1em;
   
       @include abs-position;
+      @include sm {
+        font-size: 1.125rem;
+      }
     }
     &__link {
       padding: $gap;
@@ -156,7 +161,7 @@
 }
 .skill__button {
     display: flex;
-    justify-content: center;   
+    justify-content: center;
 }   
 .btn-accent {   
     display: block; 
@@ -166,9 +171,17 @@
     background-color: rgba($color-primary, 0.8);
     border: 2px solid $color-primary;
     letter-spacing: 0.1em;
-    font-size: 1.125rem;  
+    font-size: 1.125rem;
     text-align:center;
-    transition: background-color 0.5s;  
+    transition: background-color 0.5s;
+
+    @include md-sm {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
 } 
 .btn-accent:hover {
     background-color: $color-accent;

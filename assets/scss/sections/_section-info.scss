@@ -94,10 +94,8 @@
                 }
             }
 
-            p:last-of-type {
-                @include sm {
-                    margin: 0;
-                }
+            &:last-of-type {
+                margin: 0;
             } 
         }
     }     

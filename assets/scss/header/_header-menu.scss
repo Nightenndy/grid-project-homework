@@ -6,7 +6,7 @@
     width: 100%;
   
     @include md {
-      background-color: rgba($color-light, 0.1);
+      background-color: rgba($color-gray-dark, 0.25);
     }
   
     &__container {

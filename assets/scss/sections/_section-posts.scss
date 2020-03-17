@@ -17,6 +17,15 @@
 
    &__container {
     @extend %container;
+
+    h2 {
+      @include lg-md {
+          letter-spacing: 0.1em;
+          margin-top: 0;
+          margin-bottom: 42px;
+          font-size: 2rem;
+      }
+    }
    }
 
    &__sections {
@@ -148,9 +157,9 @@
 
 .posts__button {
     display: flex;
-    justify-content: center;   
+    justify-content: center;
 } 
-.btn-accent {   
+.btn-accent {
     display: block; 
     width: 350px;
     height: 60px;
@@ -160,7 +169,11 @@
     letter-spacing: 0.1em;
     font-size: 1.125rem;  
     text-align:center;
-    transition: background-color 0.5s;  
+    transition: background-color 0.5s;
+
+    @include sm {
+        width: 100%;
+    }
 } 
 .btn-accent:hover {
     background-color: $color-accent;
