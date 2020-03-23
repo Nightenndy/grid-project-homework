@@ -20,10 +20,12 @@
   h2 {
     color: $color-primary;
     font-family: $font-header;
+    letter-spacing: 0.1em;;
     line-height: 1.2em;
     font-size: 2.5rem;
     margin-top: 0;
     margin-bottom: 55px;
+
 
     @include md-sm {
       font-size: 2rem;
@@ -35,7 +37,6 @@
       text-align: center;
       margin-top: 0;
       margin-bottom: 36px;
-      letter-spacing: 0.1em;
     }
   }
   

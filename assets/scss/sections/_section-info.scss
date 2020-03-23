@@ -22,14 +22,14 @@
         
         @include lg-md {
             font-size: 2rem;
-            margin-bottom: 42px;      
+            margin-bottom: 42px;
         }
     }
 
     &__container {
-        display: grid;          
+        display: grid;
         
-        @extend %container;        
+        @extend %container;
 
         @include lg-min {
             grid-gap: $gap * 5;
@@ -56,7 +56,6 @@
     &__content {
         h2 {
             margin-top: 0;
-            letter-spacing: 0.1em;
         }
 
         p {

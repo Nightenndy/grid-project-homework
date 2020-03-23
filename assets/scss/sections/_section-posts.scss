@@ -20,7 +20,6 @@
 
     h2 {
       @include lg-md {
-          letter-spacing: 0.1em;
           margin-top: 0;
           margin-bottom: 42px;
           font-size: 2rem;
